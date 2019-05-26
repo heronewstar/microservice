@@ -1,0 +1,29 @@
+server:
+  port: 8011
+
+#展示端点详情
+management:
+  security:
+    enabled: false
+
+#自定义info端点公开的数据
+info:
+  app:
+    name: microservice-consumer-movie-ribbon
+    encoding: UTF-8
+    java: {
+            "source": "1.8.0_92",
+            "target": "1.8.0_92"
+    }
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true  #表示将自己的IP注册到Eureka Server。若不配置该属性或将其设置为false,
+    #则表示注册微服务所在操作系统的hostname到Eureka Server。
+
+spring:
+  application:
+    name: microservice-consumer-movie-ribbon
