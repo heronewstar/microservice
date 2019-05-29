@@ -10,7 +10,7 @@
     </parent>
 	
     <groupId>com.microservice</groupId>
-    <artifactId>microservice-consumer-movie-ribbon-customizing</artifactId>
+    <artifactId>microservice-consumer-movie-feign</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -30,11 +30,12 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
-        <!--监控端点-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,11 +48,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
 
         <dependency>
